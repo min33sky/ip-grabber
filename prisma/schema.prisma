@@ -24,6 +24,6 @@ model Click {
   createdAt DateTime @default(now())
   userAgent String
   ip        String
-  Track     Track    @relation(fields: [trackId], references: [id])
+  Track     Track    @relation(fields: [trackId], references: [id], onDelete: Cascade)
   trackId   String
 }
